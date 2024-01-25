@@ -1,8 +1,14 @@
-import dxshot
 import pyautogui
 from utils.augmentations import letterbox
 import numpy as np
 import time
+import sys
+import os
+
+ROOT = os.getcwd()
+sys.path.append(os.path.join(ROOT, "dxshot.pyd"))
+
+import dxshot
 
 WIDTH, HEIGHT = pyautogui.size()
 CENTER = [WIDTH/2, HEIGHT/2]
